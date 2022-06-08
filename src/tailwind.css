@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: theme('colors.primary.DEFAULT');
+        --color-secondary: theme('colors.secondary');
+    }
+    body {
+        @apply text-gray-800 bg-primary font-roboto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-roboto font-medium text-gray-700;
+    }
+
+    /* remove arrow of number input */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        @apply appearance-none m-0;
+    }
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+    img {
+        @apply inline-block;
+    }
+    a {
+        @apply inline-block;
+    }
+    ::-webkit-scrollbar {
+        @apply w-2 h-1;
+    }
+    ::-webkit-scrollbar-track {
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #ffffff55;
+        border-radius: 10px;
+    }
+}
+
+@layer components {
+    .section-padding, .section-padding-t { @apply pt-[60px]; }
+    .section-padding, .section-padding-b { @apply pb-[60px]; }
+
+    .navbar {
+        @apply bg-slate-900;
+    }
+    .navbar__inner {
+        @apply flex items-center justify-between py-2;
+    }
+    .navbar__list {
+        @apply flex items-center;
+    }
+    .navbar__item {
+        @apply relative;
+    }
+    .navbar__link {
+        @apply text-gray-200 text-lg px-3 py-2 relative hover:text-[#E049E1];
+    }
+    .navbar__link--number {
+        @apply absolute top-0 right-0 h-5 min-w-[20px] inline-flex items-center justify-center text-gray-200 bg-red-700 text-sm rounded-xl leading-none;
+    }
+
+    .navbar__item ul {
+        @apply absolute top-full left-0 min-w-[250px] z-[1] bg-white rounded-lg shadow-lg p-2 translate-y-3 opacity-0 invisible transition-all;
+    }
+    .navbar__item ul li {}
+    .navbar__item ul a {
+        @apply block px-3 py-2 text-gray-800 rounded-md hover:bg-gray-200;
+    }
+    .navbar__item:hover > ul {
+        @apply visible opacity-100 translate-y-0;
+    }
+
+    .navbar-mobile {
+        @apply fixed top-0 right-0 bottom-0 max-w-[300px] w-[calc(100%-50px)] bg-primary-lighter z-[2] transition-all translate-x-[calc(100%+50px)];
+    }
+    .navbar-mobile__close {
+        @apply absolute top-3 right-[calc(100%+12px)] h-10 w-10 rounded-full text-lg bg-primary-lighter text-white;
+    }
+    .navbar-mobile__list {
+        @apply p-3 mt-10;
+    }
+    .navbar-mobile__item {}
+    .navbar-mobile__link {
+        @apply text-gray-200 px-5 py-2 hover:bg-[#00ADFD] rounded-md block;
+    }
+    .navbar-mobile.active {
+        @apply translate-x-[0];
+    }
+
+    
+    /* nice form */
+    .nice-form {
+        --input-padding-x: 22px;
+        --input-padding-y: 12px;
+
+        @apply text-[15px] bg-[#f1f1f1] rounded-md flex relative;
+    }
+    .nice-form__input {
+        @apply w-full py-[var(--input-padding-y)] px-[var(--input-padding-x)] bg-white rounded-md outline-none border-2;
+    }
+    .nice-form__input:hover,
+    .nice-form__input:focus {
+        @apply border-primary;
+    }
+    .nice-form__input::placeholder {
+        @apply text-transparent;
+    }
+    .nice-form__prepend {
+        @apply bg-transparent text-[15px] pointer-events-none rounded-md text-inherit;
+        @apply absolute top-[var(--input-padding-y)] left-[var(--input-padding-x)] transition-all;
+    }
+    .nice-form__input + .nice-form__prepend {
+        /* @apply ; */
+    }
+    .nice-form__input:focus + .nice-form__prepend,
+    .nice-form__input:not(:placeholder-shown) + .nice-form__prepend {
+        @apply top-[0] left-[5px] font-medium scale-[.8] bg-primary px-2 text-white transform -translate-y-1/2;
+    }
+    .nice-form.error .nice-form__input {
+        @apply border-red-500;
+    }
+    .nice-form.error .nice-form__prepend {
+        @apply text-red-500;
+    }
+
+    .overlay {
+        @apply fixed top-0 left-0 right-0 bottom-0 bg-black/80 z-[1] transition-all opacity-0 invisible;
+    }
+    .overlay.active {
+        @apply opacity-100 visible;
+    }
+}
+
+@layer utilities {
+    .container {
+        @apply xl:max-w-[1140px] 2xl:max-w-[1140px];
+    }
+    .container, .container-fluid {
+        @apply mx-auto px-4;
+    }
+    .container-fluid {
+        @apply w-full max-w-full;
+    }
+}
