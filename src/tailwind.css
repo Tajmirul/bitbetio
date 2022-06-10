@@ -185,7 +185,7 @@
         @apply w-full;
     }
     .game__content {
-        @apply absolute top-[0] left-[0] right-[0] bottom-[0] p-4 sm:p-8 z-[2];
+        @apply absolute top-[0] left-[0] right-[0] bottom-[0] p-8 z-[2];
     }
     .game__title {
         @apply text-4xl md:text-2xl font-oswald font-bold text-white leading-tight -translate-x-[calc(100%+32px)] transition-all delay-150;
