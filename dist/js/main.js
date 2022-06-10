@@ -41,33 +41,34 @@ $(document).ready(function () {
     //     }, 1500);
 
     // sticky menu ber and go to top button
-    //     $(window).scroll(function () {
-    //         var scrolled = $(window).scrollTop();
-    //         var topMain = $('main').offset().top - 400;
+    $(window).scroll(function () {
+        var scrolled = $(window).scrollTop();
+        var topMain = 400;
 
-    // go to top button
-    //         if (scrolled > topMain) {
-    //             $('.go-to-top').addClass('active');
-    //             $('.nav-outer').addClass('sticky');
-
-    //             $('.go-to-top').click(function () {
-    //                 $(window).scrollTop(0);
-    //             });
-    //         } else {
-    //             $('.go-to-top').removeClass('active');
-    //             $('.nav-outer').removeClass('sticky')
-    //         }
-    // console.log(scrolled);
-    //     });
+        // go to top button
+        if (scrolled > topMain) {
+            // $('.go-to-top').addClass('active');
+            $('.navbar').addClass('sticky');
+            $('.navbar__proxy').addClass('active');
+        } else {
+            // $('.go-to-top').removeClass('active');
+            $('.navbar').removeClass('sticky')
+            $('.navbar__proxy').removeClass('active');
+        }
+        // console.log(scrolled);
+    });
+    // $('.go-to-top').click(function () {
+    //     $(window).scrollTop(0);
+    // });
 
     // menu bar open -------------------------
     $('.open-mobile-navbar').click(function () {
         $('.navbar-mobile, .overlay').addClass('active');
     });
     // menu bar close -------------------------
-        $('.navbar-mobile__close, .overlay').click(function () {
-            $('.navbar-mobile, .overlay').removeClass('active');
-        });
+    $('.navbar-mobile__close, .overlay').click(function () {
+        $('.navbar-mobile, .overlay').removeClass('active');
+    });
     // dropdown toggle ------------------
     // $('.mobile-navigations li.has-dropdown > i').click(function () {
     //     $(this).parent().find('>ul').slideToggle()

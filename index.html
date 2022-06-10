@@ -21,7 +21,7 @@
     <!-- fonts (Raleway, Roboto Slab) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- ALL CSS -->
     <link rel="stylesheet" href="dist/css/slick.css">
@@ -39,7 +39,9 @@
     <!-- end of preloader -->
 
     <header>
-        <nav class="navbar">
+        <div class="navbar__proxy">
+        </div>
+        <nav class="navbar over-banner">
             <div class="container">
                 <div class="navbar__inner">
                     <div>
@@ -64,10 +66,10 @@
                                 </a>
 
                                 <ul class="!left-auto !right-0">
-                                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                                    <li><a href="#">BDT 2000 Deposit Confirmed</a></li>
+                                    <li><a href="#">1000 Taka Withdraw</a></li>
+                                    <li><a href="#">You Win Brazil vs. Argentina Match</a></li>
+                                    <li><a href="#">Welcome to Spovest</a></li>
                                 </ul>
                             </li>
                             <li class="navbar__item">
@@ -84,158 +86,197 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-mobile">
-                <button class="navbar-mobile__close"><i class="far fa-times"></i></button>
-                <ul class="navbar-mobile__list">
-                    <li class="navbar-mobile__item"><a href="index.html" class="navbar-mobile__link">HOME</a></li>
-                    <li class="navbar-mobile__item"><a href="deposit.html" class="navbar-mobile__link">DEPOSIT</a></li>
-                    <li class="navbar-mobile__item"><a href="withdraw.html" class="navbar-mobile__link">WITHDRAW</a></li>
-                    <li class="navbar-mobile__item"><a href="transfer.html" class="navbar-mobile__link">TRANSFER</a></li>
-                    <li class="navbar-mobile__item"><a href="profile.html" class="navbar-mobile__link">Profile</a></li>
-                </ul>
-            </div>
         </nav>
     </header>
 
+    <!--  style="background-image: linear-gradient(theme('colors.primary')), url(dist/img/bg.jpg);" -->
+    <!-- bg-[linear-gradient(#00000033,#00000033),url('/dist/img/bg.jpg')] -->
     <main>
+        <section class="banner-section">
+            <div class="banner">
+                <div class="container">
+                    <div class="banner__inner">
+                        <div class="banner__content">
+                            <h3 class="banner__sub-title">Welcome to Spovest Casino</h3>
+                            <h1 class="banner__title">PLAY FREE CASINO GAME IN YOUR BROWSER</h1>
+                            <a href="" class="tracking-[3px] font-oswald text-base px-3 sm:px-7 py-2 sm:py-4 uppercase bg-gradient-to-br from-red-400 to-rose-700 inline-block">Play now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="games-section section-padding">
             <div class="container">
-                <div class="grid grid-cols-4 gap-4">
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-1.webp" alt="" class="rounded">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-1.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Slots</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-2.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">IceBall 71</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-3.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-3.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Baccarat</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-4.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-4.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Blackjack</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-5.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Craps</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-3.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-6.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Roulette</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-4.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-7.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Poker </h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
+                    </div>
+                    <div class="game">
+                        <a href="#" class="game__image">
+                            <img src="dist/img/game/assets-8.jpg" alt="" class="rounded aspect-[1]">
+                        </a>
+                        <div class="game__content">
+                            <h3 class="game__title">Big Six wheel</h3>
+                            <a href="#" class="game__play-button">Play now</a>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-1.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-3.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-4.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-3.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-4.webp" alt="" class="rounded">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div
-                            class="aspect-[2/1] bg-primary-lighter p-2 rounded-lg shadow flex items-center justify-center border-2 border-gray-600 hover:brightness-125">
-                            <img src="dist/img/game/game-2.webp" alt="" class="rounded">
-                        </div>
-                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="be-in-control section-padding-b">
+            <div class="container">
+                <div class="mb-10 text-center">
+                    <h3 class="text-3xl font-oswald uppercase mb-2 text-gray-200">BE IN CONTROL</h3>
+                    <p class="text-gray-300">Set limits so you don't go overboard</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="text-center text-gray-200">
+                        <div class="text-5xl mb-6"><i class="fal fa-money-bill"></i></div>
+                        <h5 class="text-xl font-oswald tracking-wider mb-3 text-gray-200">DEPOSIT LIMIT</h5>
+                        <p class="text-gray-300">Play in confidence by setting a deposit limit that prevents you from depositing more than you should</p>
+                    </div>
+                    <div class="text-center text-gray-200">
+                        <div class="text-5xl mb-6"><i class="fal fa-chart-area"></i></div>
+                        <h5 class="text-xl font-oswald tracking-wider mb-3 text-gray-200">LOSS LIMIT</h5>
+                        <p class="text-gray-300">Play in confidence by setting a deposit limit that prevents you from depositing more than you should</p>
+                    </div>
+                    <div class="text-center text-gray-200">
+                        <div class="text-5xl mb-6"><i class="fal fa-handshake-alt"></i></div>
+                        <h5 class="text-xl font-oswald tracking-wider mb-3 text-gray-200">DEPOSIT LIMIT</h5>
+                        <p class="text-gray-300">Play in confidence by setting a deposit limit that prevents you from depositing more than you should</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-primary-lighter text-white py-10">
+    <footer class="text-gray-400 section-padding-t bg-cover" style="background-image: url('dist/img/bg-black.png');">
         <div class="container">
-            <div class="flex items-center justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
-                    <img src="dist/img/logo.png" alt="">
+                    <img src="dist/img/logo.png" alt="" class="mb-5">
+                    <p>Reinventing the way of creating websites, we aim to create the most master-peaced HTML theme available on the market.</p>
                 </div>
                 <div>
+                    <h4 class="border-l-4 border-indigo-500 text-base font-bold leading-none pl-2 text-gray-300 mb-10">CONTACT US</h4>
+                    <div>202 Helga Springs Rd, Crawford, TN 38554</div>
+                    <div>Call Us: <a href="tel:800.275.8777" class="hover:text-indigo-600">800.275.8777</a></div>
+                    <div><a href="mailto:alex@company.com" class="hover:text-indigo-600">alex@company.com</a></div>
+
                     <!-- social links -->
-                    <ul class="flex justify-center space-x-2">
+                    <ul class="flex space-x-2 mt-5">
                         <li>
-                            <a href="#" class="rounded-full text-gray-300 w-10 h-10 flex items-center justify-center border-2 border-gray-500 hover:bg-primary hover:text-white hover:border-transparent transition-all">
+                            <a href="#" class="rounded-full text-sm text-gray-300 w-8 h-8 flex items-center justify-center border-2 border-gray-500 hover:bg-indigo-600 hover:text-white hover:border-transparent transition-all">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="rounded-full text-gray-300 w-10 h-10 flex items-center justify-center border-2 border-gray-500 hover:bg-primary hover:text-white hover:border-transparent transition-all">
+                            <a href="#" class="rounded-full text-sm text-gray-300 w-8 h-8 flex items-center justify-center border-2 border-gray-500 hover:bg-indigo-600 hover:text-white hover:border-transparent transition-all">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="rounded-full text-gray-300 w-10 h-10 flex items-center justify-center border-2 border-gray-500 hover:bg-primary hover:text-white hover:border-transparent transition-all">
+                            <a href="#" class="rounded-full text-sm text-gray-300 w-8 h-8 flex items-center justify-center border-2 border-gray-500 hover:bg-indigo-600 hover:text-white hover:border-transparent transition-all">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="rounded-full text-gray-300 w-10 h-10 flex items-center justify-center border-2 border-gray-500 hover:bg-primary hover:text-white hover:border-transparent transition-all">
+                            <a href="#" class="rounded-full text-sm text-gray-300 w-8 h-8 flex items-center justify-center border-2 border-gray-500 hover:bg-indigo-600 hover:text-white hover:border-transparent transition-all">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <div>
+                    <h4 class="border-l-4 border-indigo-500 text-base font-bold leading-none pl-2 text-gray-300 mb-10">SIGN UP FOR EMAIL UPDATES</h4>
+                    <form action="" method="post" class="relative">
+                        <div class="nice-form large dark">
+                            <input type="email" class="nice-form__input" placeholder="Email">
+                            <label class="nice-form__prepend">Email</label>
+                        </div>
+                        <button type="submit" class="h-[calc(100%-20px)] absolute right-[10px] top-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-5 rounded-md">Subscribe</button>
+                    </form>
+                    <p class="mt-3">Sign up with your email address to receive news and updates</p>
+                </div>
             </div>
+            <div class="copyright py-5 mt-10 text-center border-t border-gray-700">Copyright ©2022 SPOVEST. All rights reserved.</div>
         </div>
     </footer>
+
+    <div class="navbar-mobile">
+        <button class="navbar-mobile__close"><i class="far fa-times"></i></button>
+        <ul class="navbar-mobile__list">
+            <li class="navbar-mobile__item"><a href="index.html" class="navbar-mobile__link"><i class="fal fa-home mr-1"></i> HOME</a></li>
+            <li class="navbar-mobile__item"><a href="deposit.html" class="navbar-mobile__link"><i class="fal fa-wallet mr-1"></i> DEPOSIT</a></li>
+            <li class="navbar-mobile__item"><a href="withdraw.html" class="navbar-mobile__link"><i class="fal fa-sack-dollar mr-1"></i> WITHDRAW</a></li>
+            <li class="navbar-mobile__item"><a href="transfer.html" class="navbar-mobile__link"><i class="fal fa-envelope-open-dollar mr-1"></i> TRANSFER</a></li>
+            <li class="navbar-mobile__item"><a href="profile.html" class="navbar-mobile__link"><i class="fal fa-user mr-1"></i> Profile</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
 
     <!-- ALL JS -->
     <script src="dist/js/jquery-3.5.1.min.js"></script>

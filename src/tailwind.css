@@ -46,11 +46,20 @@
 }
 
 @layer components {
-    .section-padding, .section-padding-t { @apply pt-[60px]; }
-    .section-padding, .section-padding-b { @apply pb-[60px]; }
+    .section-padding, .section-padding-t { @apply pt-[100px]; }
+    .section-padding, .section-padding-b { @apply pb-[100px]; }
 
     .navbar {
-        @apply bg-slate-900;
+        @apply bg-slate-800 z-[4] transition-all;
+    }
+    .navbar__proxy.active {
+        @apply h-[74px];
+    }
+    .navbar.over-banner {
+        @apply bg-transparent absolute top-0 left-0 right-0;
+    }
+    .navbar.sticky {
+        @apply bg-primary-lighter fixed top-0 left-0 right-0;
     }
     .navbar__inner {
         @apply flex items-center justify-between py-2;
@@ -62,25 +71,25 @@
         @apply relative;
     }
     .navbar__link {
-        @apply text-gray-200 text-lg px-3 py-2 relative hover:text-[#E049E1];
+        @apply text-gray-200 text-base px-3 py-2 relative hover:text-rose-600 font-oswald tracking-wide;
     }
     .navbar__link--number {
         @apply absolute top-0 right-0 h-5 min-w-[20px] inline-flex items-center justify-center text-gray-200 bg-red-700 text-sm rounded-xl leading-none;
     }
 
     .navbar__item ul {
-        @apply absolute top-full left-0 min-w-[250px] z-[1] bg-white rounded-lg shadow-lg p-2 translate-y-3 opacity-0 invisible transition-all;
+        @apply absolute top-full left-0 min-w-[250px] z-[1] bg-primary-light rounded-lg shadow-lg p-2 translate-y-3 opacity-0 invisible transition-all;
     }
     .navbar__item ul li {}
     .navbar__item ul a {
-        @apply block px-3 py-2 text-gray-800 rounded-md hover:bg-gray-200;
+        @apply block px-3 py-2 text-gray-200 rounded-md hover:bg-primary-lighter leading-tight;
     }
     .navbar__item:hover > ul {
         @apply visible opacity-100 translate-y-0;
     }
 
     .navbar-mobile {
-        @apply fixed top-0 right-0 bottom-0 max-w-[300px] w-[calc(100%-50px)] bg-primary-lighter z-[2] transition-all translate-x-[calc(100%+50px)];
+        @apply fixed top-0 right-0 bottom-0 max-w-[250px] w-[calc(100%-50px)] bg-gradient-to-br from-cyan-500 to-blue-500 z-[5] transition-all translate-x-[calc(100%+50px)];
     }
     .navbar-mobile__close {
         @apply absolute top-3 right-[calc(100%+12px)] h-10 w-10 rounded-full text-lg bg-primary-lighter text-white;
@@ -90,22 +99,35 @@
     }
     .navbar-mobile__item {}
     .navbar-mobile__link {
-        @apply text-gray-200 px-5 py-2 hover:bg-[#00ADFD] rounded-md block;
+        @apply font-oswald tracking-wider text-gray-200 px-5 py-2 hover:bg-[#00ADFD] rounded-md block;
     }
     .navbar-mobile.active {
         @apply translate-x-[0];
     }
 
+    .banner {
+        background-image: linear-gradient(theme('colors.primary.DEFAULT')a1, theme('colors.primary.DEFAULT')), url(../img/banner-bg-1.jpg);
+        @apply flex items-center h-[400px] md:h-[600px] pt-[100px];
+    }
+    .banner__inner {
+        @apply max-w-[600px] mx-auto text-white text-center;
+    }
+    .banner__sub-title {
+        @apply font-oswald font-bold text-lg sm:text-xl text-rose-500 tracking-wider mb-4;
+    }
+    .banner__title {
+        @apply font-oswald font-bold !leading-tight text-2xl sm:text-3xl md:text-5xl text-gray-200 tracking-wide mb-8;
+    }
     
     /* nice form */
     .nice-form {
         --input-padding-x: 22px;
         --input-padding-y: 12px;
 
-        @apply text-[15px] bg-[#f1f1f1] rounded-md flex relative;
+        @apply text-[15px] flex relative;
     }
     .nice-form__input {
-        @apply w-full py-[var(--input-padding-y)] px-[var(--input-padding-x)] bg-white rounded-md outline-none border-2;
+        @apply w-full py-[var(--input-padding-y)] px-[var(--input-padding-x)] bg-[#fff] rounded-md outline-none border-2;
     }
     .nice-form__input:hover,
     .nice-form__input:focus {
@@ -131,9 +153,61 @@
     .nice-form.error .nice-form__prepend {
         @apply text-red-500;
     }
+    .nice-form.dark .nice-form__input {
+        @apply bg-primary-light border-none;
+    }
+    .nice-form.dark .nice-form__input:focus + .nice-form__prepend,
+    .nice-form.dark .nice-form__input:not(:placeholder-shown) + .nice-form__prepend {
+        @apply bg-indigo-600 text-gray-300;
+    }
+    .nice-form.large {
+        --input-padding-x: 24px;
+        --input-padding-y: 16px;
+    }
+
+    /* * game */
+    .game {
+        @apply bg-primary-lighter border border-[#ff464d1a] relative overflow-hidden;
+    }
+    .game::before, .game::after {
+        @apply content-[''] absolute z-[1];
+    }
+    .game::before {
+        @apply left-0 top-0 w-full h-[150%] bg-secondary/90 rotate-[28deg] translate-y-[-20%] translate-x-[-130%] transition-all;
+    }
+    .game::after {
+        @apply right-0 top-0 w-[80%] h-[150%] bg-gradient-to-r from-red-400/90 to-rose-700/90 rotate-[25deg] translate-y-[-15%] translate-x-[140%] transition-all;
+    }
+    .game__image {
+        @apply w-full;
+    }
+    .game__image img {
+        @apply w-full;
+    }
+    .game__content {
+        @apply absolute top-[0] left-[0] right-[0] bottom-[0] p-4 sm:p-8 z-[2];
+    }
+    .game__title {
+        @apply text-4xl md:text-2xl font-oswald font-bold text-white leading-tight -translate-x-[calc(100%+32px)] transition-all delay-150;
+    }
+    .game__play-button {
+        @apply tracking-[2px] text-white font-oswald text-sm px-4 py-2 whitespace-nowrap uppercase bg-gradient-to-br from-red-400 to-rose-700 inline-block mt-4 -translate-x-[calc(100%+32px)] transition-all delay-200;
+    }
+
+    .game:hover::before {
+        @apply translate-y-[-20%] translate-x-[-30%] rotate-[25deg];
+    }
+    .game:hover::after {
+        @apply translate-y-[-15%] translate-x-[69%] rotate-[25deg];
+    }
+
+    .game:hover .game__title,
+    .game:hover .game__play-button {
+        @apply translate-x-[0];
+    }
 
     .overlay {
-        @apply fixed top-0 left-0 right-0 bottom-0 bg-black/80 z-[1] transition-all opacity-0 invisible;
+        @apply fixed top-0 left-0 right-0 bottom-0 bg-black/80 z-[4] transition-all opacity-0 invisible;
     }
     .overlay.active {
         @apply opacity-100 visible;

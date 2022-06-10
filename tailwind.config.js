@@ -1,22 +1,28 @@
 module.exports = {
-  content: [
-    './src/**/*.css',
-    './*.html'
-  ],
-  theme: {
-    "fontFamily": {
-      "roboto": ["Roboto", "sans-serif"],
-    },
-    extend: {
-      colors: {
-        primary: {
-          lighter:'#322A71',
-          light: '#291B6B',
-          DEFAULT: '#0E0C44',
+    content: [
+        './src/**/*.css',
+        './*.html'
+    ],
+    theme: {
+        "fontFamily": {
+            roboto: ["Roboto", "sans-serif"],
+            oswald: ["Oswald", "sans-serif"],
         },
-        secondary: "#571CE0",
-      },
+        extend: {
+            colors: {
+                primary: {
+                    lighter: '#322A71',
+                    light: '#202342',
+                    DEFAULT: '#09102a',
+                },
+                secondary: "#571CE0",
+            },
+            screens: {
+                'xs': '480px',
+            }
+        },
     },
-  },
-  plugins: [],
+    plugins: [
+        require('@tailwindcss/line-clamp'),
+    ],
 }
