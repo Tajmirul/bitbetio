@@ -135,8 +135,13 @@
                             </div>
                         </div>
 
-                        <div class="table-responsive w-full overflow-x-auto overflow-y-hidden mt-5">
-                            <table class="table-auto w-full min-w-[550px] text-gray-200 text-center">
+                        <div class="flex space-x-3 mt-5">
+                            <a href="#" data-scroll-to="#recentActivity" class="button button--secondary">Recent Activity</a>
+                            <a href="#" data-scroll-to="#withdrawHistory" class="button button--secondary">Withdraw History</a>
+                            <a href="#" data-scroll-to="#depositHistory" class="button button--secondary">Deposit History</a>
+                        </div>
+                        <div class="table-responsive w-full overflow-x-auto overflow-y-hidden mt-5" id="recentActivity">
+                            <table class="table-auto w-full min-w-[550px] text-gray-200 text-center text-sm sm:text-base">
                                 <thead>
                                     <tr class="bg-primary-lighter">
                                         <td colspan="4" class="text-lg text-left font-medium px-6 py-4">Recent Activity</td>
@@ -165,6 +170,112 @@
                                         <td class="px-6 py-4">Add Money</td>
                                         <td class="px-6 py-4">Deposit</td>
                                         <td class="px-6 py-4">+1000</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Ludu</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">+200</td>
+                                        <td class="px-6 py-4">8 June, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Head-Tell</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">-150</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-responsive w-full overflow-x-auto overflow-y-hidden mt-5" id="withdrawHistory">
+                            <table class="table-auto w-full min-w-[550px] text-gray-200 text-center text-sm sm:text-base">
+                                <thead>
+                                    <tr class="bg-primary-lighter">
+                                        <td colspan="4" class="text-lg text-left font-medium px-6 py-4">Withdraw History</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <th class="px-6 py-4">Activity</th>
+                                        <th class="px-6 py-4">Type</th>
+                                        <th class="px-6 py-4">Amount ( <i class="fal fa-dollar-sign"></i> )</th>
+                                        <th class="px-6 py-4">Time/Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Ludu</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">+200</td>
+                                        <td class="px-6 py-4">8 June, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Head-Tell</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">-150</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Add Money</td>
+                                        <td class="px-6 py-4">Deposit</td>
+                                        <td class="px-6 py-4">+1000</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Ludu</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">+200</td>
+                                        <td class="px-6 py-4">8 June, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Head-Tell</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">-150</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-responsive w-full overflow-x-auto overflow-y-hidden mt-5" id="depositHistory">
+                            <table class="table-auto w-full min-w-[550px] text-gray-200 text-center text-sm sm:text-base">
+                                <thead>
+                                    <tr class="bg-primary-lighter">
+                                        <td colspan="4" class="text-lg text-left font-medium px-6 py-4">Deposit History</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <th class="px-6 py-4">Activity</th>
+                                        <th class="px-6 py-4">Type</th>
+                                        <th class="px-6 py-4">Amount ( <i class="fal fa-dollar-sign"></i> )</th>
+                                        <th class="px-6 py-4">Time/Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Ludu</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">+200</td>
+                                        <td class="px-6 py-4">8 June, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Head-Tell</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">-150</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Add Money</td>
+                                        <td class="px-6 py-4">Deposit</td>
+                                        <td class="px-6 py-4">+1000</td>
+                                        <td class="px-6 py-4">2 April, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Ludu</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">+200</td>
+                                        <td class="px-6 py-4">8 June, 2022</td>
+                                    </tr>
+                                    <tr class="bg-primary-light border-b-2 border-primary-lighter">
+                                        <td class="px-6 py-4">Head-Tell</td>
+                                        <td class="px-6 py-4">Play</td>
+                                        <td class="px-6 py-4">-150</td>
                                         <td class="px-6 py-4">2 April, 2022</td>
                                     </tr>
                                 </tbody>

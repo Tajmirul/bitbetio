@@ -47,19 +47,21 @@ $(document).ready(function () {
 
         // go to top button
         if (scrolled > topMain) {
-            // $('.go-to-top').addClass('active');
             $('.navbar').addClass('sticky');
             $('.navbar__proxy').addClass('active');
         } else {
-            // $('.go-to-top').removeClass('active');
             $('.navbar').removeClass('sticky')
             $('.navbar__proxy').removeClass('active');
         }
-        // console.log(scrolled);
     });
-    // $('.go-to-top').click(function () {
-    //     $(window).scrollTop(0);
-    // });
+    $('[data-scroll-to]').on('click', function (event) {
+        event.preventDefault();
+        var target = $(this).data('scrollTo');
+        console.log(target);
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 100
+        }, 400);
+    });
 
     // menu bar open -------------------------
     $('.open-mobile-navbar').click(function () {
