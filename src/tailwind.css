@@ -56,6 +56,9 @@
     .button--secondary {
         @apply text-sm md:text-base font-medium bg-primary-light text-gray-300 font-oswald tracking-wider hover:bg-primary-lighter;
     }
+    .button--secondary.active {
+        @apply bg-primary-lighter;
+    }
     
     /* * navbar */
     .navbar {
